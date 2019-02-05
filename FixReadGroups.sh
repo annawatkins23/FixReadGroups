@@ -35,9 +35,9 @@ module load samtools
 ##########################################################
 
 #####Defining the path to the picard script location######
-picard_rg="/opt/asn/apps/picard_1.79/picard-tools-1.79/AddOrReplaceReadGroups.jar"
+picard_rg_path="/opt/asn/apps/picard_1.79/picard-tools-1.79/AddOrReplaceReadGroups.jar"
 
-java -jar $picard_rg I= InoutFile.sorted.bam O=OutputFile.rg.bam RGID=SampleInformation \
+java -jar $picard_rg_path I= InoutFile.sorted.bam O=OutputFile.rg.bam RGID=SampleInformation \
 RGLB=SampleLibraryInformation RGPL=Illumina_SamplePlatform RGPU=PS35299_SampleLane \
 RGSM=Sample_Name RGDS=Sample_Sex\
 
